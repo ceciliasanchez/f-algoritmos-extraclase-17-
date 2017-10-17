@@ -12,4 +12,13 @@ package tarea1;
 public class Titulo {
     private String nombre;
     private String nombre_universidad;
+    
+     
+     public void establecer_nombre_universidad(String nomb_uni){
+         nombre_universidad = nomb_uni;
+     }
+     
+     public String obtener_nombre_universidad(){
+         return nombre_universidad;
+     }
 }

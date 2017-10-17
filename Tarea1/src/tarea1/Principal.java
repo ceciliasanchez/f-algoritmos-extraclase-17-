@@ -18,6 +18,8 @@ public class Principal {
         // TODO code application logic here
         Docente caso1 = new Docente();
         Docente caso2 = new Docente();
+        Asignatura asignatura = new Asignatura();
+        Titulo titulo = new Titulo();
 
         System.out.println("Caso 1:");
 
@@ -28,17 +30,23 @@ public class Principal {
         System.out.println("Apellidos:" + caso1.obtener_apellidos());
         System.out.println("Tiene a su cargo las asignaturas:");
 
-        caso1.establecer_asignatura_1("Matemáticas con número de créditos 8");
-        System.out.println("  Asignatura 1: " + caso1.obtener_asignatura1());
+        caso1.establecer_asignatura_1("Matemáticas");
+        asignatura.establecer_creditos(8);
+        System.out.println("  Asignatura 1: " + caso1.obtener_asignatura1() + " con número de créditos " + asignatura.obtener_creditos());
 
-        caso1.establecer_asignatura_2("Física con número de créditos 6");
-        System.out.println("  Asignatura 2: " + caso1.obtener_asignatura2());
+        caso1.establecer_asignatura_2("Física");
+        asignatura.establecer_creditos(6);
+        System.out.println("  Asignatura 2: " + caso1.obtener_asignatura2() + " con número créditos " + asignatura.obtener_creditos());
+
         System.out.println("El docente tiene los siguientes títulos académicos");
-        caso1.establecer_titulo_tercer_nivel("Licenciado de Matamáticas - Universidad Politécnica");
-        System.out.println("  Título Tercer Nivel: " + caso1.obtener_titulo_tercer_nivel());
+        caso1.establecer_titulo_tercer_nivel("Licenciado de Matemáticas");
+        titulo.establecer_nombre_universidad("Universidad Politécnica");
+        System.out.println("  Título Tercer Nivel: " + caso1.obtener_titulo_tercer_nivel() + " - " + titulo.obtener_nombre_universidad());
 
-        caso1.establecer_titulo_cuarto_nivel("Magister en Docencia Matemática - Universidad Valenciana");
-        System.out.println("  Titulo Cuarto Nivel: " + caso1.obtener_titulo_cuarto_nivel());
+        caso1.establecer_titulo_cuarto_nivel("Magister en Docencia Matemática");
+        titulo.establecer_nombre_universidad("Universidad Valenciana");
+        System.out.println("  Titulo Cuarto Nivel: " + caso1.obtener_titulo_cuarto_nivel() + " - " + titulo.obtener_nombre_universidad());
+
         System.out.println("\n");
 
         System.out.println("Caso 2:");
@@ -49,17 +57,21 @@ public class Principal {
         System.out.println("Apellidos:" + caso2.obtener_apellidos());
         System.out.println("Tiene a su cargo las asignaturas:");
 
-        caso2.establecer_asignatura_1("Sociales con número de créditos 9");
-        System.out.println("  Asignatura 1: " + caso2.obtener_asignatura1());
+        caso2.establecer_asignatura_1("Sociales");
+        asignatura.establecer_creditos(9);
+        System.out.println("  Asignatura 1: " + caso2.obtener_asignatura1() + " con número de créditos " + asignatura.obtener_creditos());
 
-        caso2.establecer_asignatura_2("Literatura con número de créditos 10");
-        System.out.println("  Asignatura 2: " + caso2.obtener_asignatura2());
+        caso2.establecer_asignatura_2("Literatura");
+        asignatura.establecer_creditos(10);
+        System.out.println("  Asignatura 2: " + caso2.obtener_asignatura2() + " con múmero de créditos " + asignatura.obtener_creditos());
         System.out.println("El docente tiene los siguientes títulos académicos");
-        caso2.establecer_titulo_tercer_nivel("Licenciado en Ciencias Sociales - Universidad Salesiana");
-        System.out.println("  Título Tercer Nivel: " + caso2.obtener_titulo_tercer_nivel());
+        caso2.establecer_titulo_tercer_nivel("Licenciado en Ciencias Sociales ");
+        titulo.establecer_nombre_universidad("Universidad Salesiana");
+        System.out.println("  Título Tercer Nivel: " + caso2.obtener_titulo_tercer_nivel() + " - " + titulo.obtener_nombre_universidad());
 
-        caso2.establecer_titulo_cuarto_nivel("Magister en Docencia Social - Universidad Cataluña");
-        System.out.println("  Titulo Cuarto Nivel: " + caso2.obtener_titulo_cuarto_nivel());
+        caso2.establecer_titulo_cuarto_nivel("Magister en Docencia Social ");
+        titulo.establecer_nombre_universidad("Universidad Cataluña");
+        System.out.println("  Titulo Cuarto Nivel: " + caso2.obtener_titulo_cuarto_nivel() + " - " + titulo.obtener_nombre_universidad());
     }
 
 }
